@@ -2,8 +2,12 @@
 
 	namespace MyCommon\Connect{
 
-		require_once '../config1.php';
-		
+		chdir(dirname(__FILE__));
+		require_once('../config.php');
+		require_once('searchMysql.php');
+
+
+
 		/**建议使用该函数
 		 * 连接MYSQL函数,通过常量的形式来连接数据库
 		 * 自定义配置文件，配置文件中自定义常量，包含需要使用的信息
@@ -17,6 +21,12 @@
 		    //打开指定的数据库
 		    mysql_select_db(DB_DBNAME) or die('指定的数据库打开失败');
 		    return $link;
+		}
+
+		/**建议使用该函数
+		 */
+		function connectSqli (){ 
+
 		}
 
 		/**

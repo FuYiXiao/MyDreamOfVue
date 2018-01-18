@@ -1,30 +1,30 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>vuetest</title>
-  </head>
-  <body>
-    <div id="app">大家好</div>
- 
-  </body>
-</html>
-
 <?php
 
+  //define('ROOT_PATH',dirname(__FILE__));
+  //echo ROOT_PATH;
 
+	require_once('phpCommon/mysql/connectMysql.php');
 
-
-	require_once  'phpCommon/mysql/connectMysql.php';
-
+  
 	use MyCommon\Connect as Connect;
 
   $link = Connect\connect();
+
+  $sql = "select * from myguests";
+
   if($link){
-    echo $link;
+
+    $result  = Connect\fetchAll($sql);
+
+    /*
+    foreach ($result as $pre){ 
+      echo "$pre[id] $pre[firstname] $pre[lastname] $pre[email]"; 
+    } 
+    */
+    echo json_encode($result);
+
   }else{
-    echo "失败";
+    echo "数据库连接失败";
   }
 
 
