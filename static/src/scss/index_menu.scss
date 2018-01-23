@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*@import "../../node_modules/compass-mixins/lib/compass/reset";*/
+//@import "./compass/reset";
+
+@import "normalize.css";
+@import "_base";
+//@import "./test"; 
+
+$fontsize:12x;
+$zIndex:10;
+$baseBgColor:#000;
+$baseColor:#fff;
+$basePadding: 2.2vh;
+$baseSepColor:#ff8700;
+body{
+	background-color: $baseBgColor;
+	color:$baseColor;
+	font-size: $basePadding;
+}
+
+.pub-menu{
+	position: fixed; z-index: $zIndex;
+	left: 0px; bottom:0px; width: 100%;
+	display: flex; 
+	border-top:1px dotted lighten($baseBgColor,20%);
+	.menu{
+		display: inline-flex; flex-grow:1; cursor: pointer; line-height: 1;
+		padding-bottom:$basePadding *0.5; padding-top:$basePadding *0.5;
+		height: $basePadding *2; text-align: center;
+		justify-content:center;
+		border-left:1px dotted lighten($baseBgColor,20%);
+		background-image:linear-gradient(to top,$baseBgColor,lighten($baseBgColor,20%));
+		&:first-child{
+			border-left:none;
+		};
+	}
+	.current{
+		background-image:linear-gradient(to top,$baseBgColor,lighten($baseBgColor,50%));
+	}
+	.icon{
+		display: inline-block; margin-right: 0.5em;
+		width:$basePadding ; 
+		fill:$baseColor;
+	}
+}
+
+

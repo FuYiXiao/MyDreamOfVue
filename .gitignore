@@ -1,0 +1,10 @@
+*.scssc
+*.name
+.idea/000TemplateAutoScale.iml
+*.xml
+.idea/libraries/compass_library.xml
+*.xml
+.idea/libraries/compass_library.xml
+*.xml
+node_modules
+static/node_modules

@@ -1,0 +1,25 @@
+@import "./compass/css3";
+
+//清楚浮动
+@mixin clearfix(){
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+*{
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+.clearfix{
+  @include clearfix;
+}
