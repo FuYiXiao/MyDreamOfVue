@@ -1,3 +1,7 @@
+<?php 
+echo "Hello World!<br/>"; 
+echo $_SERVER['PHP_SELF'];
+?> 
 <?php
 
 // Page created by Shepard [Fabian Pijcke] <Shepard8@laposte.net>
@@ -630,6 +634,4 @@ EOPAGEC;
 echo $pageContents;
 
 ?>
-<?php 
-echo "Hello World!"; 
-?> 
+

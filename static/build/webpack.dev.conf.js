@@ -58,8 +58,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       inject: true
     }),
     new HtmlWebpackPlugin({
-      filename: 'begin.html',
-      template: 'begin.html',
+      filename: 'home.html',
+      template: 'home.html',
       inject: true
     }),
     // copy custom static assets
@@ -72,22 +72,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     ])
   ]
 })
-
-debugger
-//@import "../../node_modules/compass-mixins/lib/compass/reset";
-/*
-devWebpackConfig.module.rules[10].use[3]={
-  loader: "sass-loader",
-  options:{
-    sourceMap:true,
-    includePaths:[
-      path.resolve(__dirname, "../node_modules/compass-mixins/lib")
-    ]
-  }           
-}
-*/
-console.log(path.resolve(__dirname, "../node_modules/compass-mixins/lib"));
-//console.log(JSON.stringify(devWebpackConfig))
 
 module.exports = new Promise((resolve, reject) => {
   portfinder.basePort = process.env.PORT || config.dev.port

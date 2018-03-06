@@ -10,10 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    //代理设置 例如： MVC/index.php/search_data/root_data
+    proxyTable: {    
+            '/MVC/':{
+            target: 'http://10.200.104.156:80/'
+        }
+    },
 
     // Various Dev Server settings
-    host: '10.200.104.248', // can be overwritten by process.env.HOST localhost
+    host: '10.200.104.156', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

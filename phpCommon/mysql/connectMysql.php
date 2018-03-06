@@ -2,12 +2,9 @@
 
 	namespace MyCommon\Connect{
 
-
 		chdir(dirname(__FILE__));
 		require_once('../config.php');
 		require_once('searchMysql.php');
-
-
 
 		/**建议使用该函数
 		 * 连接MYSQL函数,通过常量的形式来连接数据库
